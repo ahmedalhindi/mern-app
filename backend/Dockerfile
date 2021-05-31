@@ -1,4 +1,4 @@
-FROM node:16.2.0-alpine3.13
+FROM node:lts-alpine3.13
 CMD [ "npm", "start" ]
 RUN addgroup app && adduser -S -G app app
 USER app
