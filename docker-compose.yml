@@ -1,4 +1,5 @@
 version: "3.8"
+
 services:
     web:
         build: ./frontend
@@ -17,6 +18,11 @@ services:
         volumes:
             - dbdata:/data/db
             - dbconfig:/data/configdb
+
 volumes:
     dbdata:
     dbconfig:
+
+networks:
+    default:
+        name: mern_net
