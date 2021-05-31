@@ -11,6 +11,9 @@ services:
             - 3005:3000
         volumes: 
             - ./backend/src:/app/src
+        environment: 
+            DB_URL: mongodb://db/mern
+
     db:
         image: mongo:4.0-xenial
         ports:
